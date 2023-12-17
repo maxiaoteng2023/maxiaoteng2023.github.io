@@ -61,6 +61,9 @@
       event.preventDefault(); // 阻止表单提交默认行为  
       var password = document.getElementById("password").value; // 获取输入的密码  
       if (password === "123456") { // 判断密码是否为"123456"  
+        // 登录成功后  
+        sessionStorage.setItem('user_logged_in', 'true');
+
         window.location.href = "BMI.html"; // 跳转到BMI.html页面  
       } else {  
         alert("密码错误！"); // 密码错误提示  
