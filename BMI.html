@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>计算BMI</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      color: #333;  
+      background-color: #f5f5f5;  
+    }  
+    
+    form {  
+      margin: 20px auto;  
+      width: 300px;  
+      padding: 20px;  
+      border: 1px solid #ccc;  
+      border-radius: 5px;  
+    }  
+    label {  
+      display: block;  
+      margin-bottom: 10px;  
+    }  
+    input[type="text"] {  
+      width: 100%;  
+      padding: 10px;  
+      border: 1px solid #ccc;  
+      border-radius: 5px;  
+      box-sizing: border-box;  
+    }  
+    button {  
+      display: block;  
+      margin-top: 10px;  
+      padding: 10px 20px;  
+      background-color: #4CAF50;  
+      color: white;  
+      border: none;  
+      cursor: pointer;  
+      border-radius: 5px;  
+    }  
+    button:hover {  
+      background-color: #45a049;  
+    }  
+    #bmi {  
+      margin-top: 20px;  
+      font-size: 35px;  
+      text-align: center;
+      font-family: Times;
+      font:bold;
+    }  
+    #inbmi {  
+      margin-top: 20px;  
+      font-size: 18px;  
+    }
+    @keyframes slide {  
+        0% {margin-left: 0%;}  
+        50% {margin-left: 67%;}  
+        100% {margin-left: 0%;}  
+    }  
+    @keyframes rotate {  
+      0% {  
+        transform: rotate(0deg);  
+      }  
+      100% {  
+        transform: rotate(30deg);  
+      }  
+    }  
+    #moving-text {  
+        animation: slide 15s linear infinite;
+        /* animation: rotate 0.01s linear infinite;   */
+    }  
+  </style>
+  <script>  
+    function calculateBMI() {  
+      var weight = parseFloat(document.getElementById("weight").value);  
+      var height = parseFloat(document.getElementById("height").value);  
+      var bmi = weight / (height * height);  
+      document.getElementById("inbmi").innerHTML = "BMI指数计算结果为：";
+      document.getElementById("bmi").innerHTML = bmi.toFixed(4);  
+    }  
+  </script>    
+</head>  
+<body>  
+  <h1 id="moving-text">欢迎使用BMI智能化电子测试软件</h1>  
+  <form>  
+    <label for="weight">体重（kg）:</label>  
+    <input type="text" id="weight" name="weight" ><br><br>  
+    <label for="height">身高（m）:</label>  
+    <input type="text" id="height" name="height"><br><br>  
+    <button type="button" onclick="calculateBMI()">计算</button><br><br>  
+    <p id="inbmi"></p>
+    <p id="bmi"></p>  
+  </form>  
+</body>  
+</html>
