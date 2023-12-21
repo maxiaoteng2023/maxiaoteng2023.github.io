@@ -18,6 +18,12 @@
   
 <body>  
     <script>  
+         if (sessionStorage.getItem('user_logged_in') === 'true') {  
+        // 用户已登录，允许访问  
+        } else {  
+    // 用户未登录，重定向到登录页面  
+            window.location.href = '/';  
+        }
         //这里代码多了几行，但是不会延迟显示，速度比较好，格式可以自定义，是理想的时间显示
         setInterval("fun(show_time)",1);
         function fun(timeID){ 
