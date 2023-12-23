@@ -184,6 +184,13 @@ body {
 </div>
 </div>
 <script type="text/javascript" charset="UTF-8" async="" src="./clock_files/js-sdk-pro.min.js" id="LA_COLLECT"></script><script>
+	// 检查用户是否已登录  
+    if (sessionStorage.getItem('user_logged_in') === 'true') {  
+        // 用户已登录，允许访问  
+    } else {  
+    // 用户未登录，重定向到登录页面  
+        window.location.href = '/';  
+    }
 var clock = document.querySelector('#utility-clock')
 utilityClock(clock)
 if (clock.parentNode.classList.contains('fill')) autoResize(clock, 295 + 32)
