@@ -60,13 +60,14 @@
     document.getElementById("loginForm").addEventListener("submit", function(event) {  
       event.preventDefault(); // 阻止表单提交默认行为  
       var password = document.getElementById("password").value; // 获取输入的密码  
-      if (password === "147258" || "mima" || "a320" && password != "") { // 判断密码是否为"123456"  
+      if ((password === "147258" || "mima" || "a320" || "clk") && (password != "" && password != null)) { // 判断密码是否为"123456"  
         // 登录成功后  
         sessionStorage.setItem('user_logged_in', 'true');
         alert("恭喜！密码正确！")
         if (password === "a320") {
           window.location.href = "shizhong"
         }
+        else if(password === "clk"){window.location.href = "clock"}
         else {window.location.href = "BMI";} // 跳转到BMI.html页面  
       } else {  
         alert("密码错误！"); // 密码错误提示  
