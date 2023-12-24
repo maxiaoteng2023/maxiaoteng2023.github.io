@@ -43,6 +43,9 @@
 <body>  
   <div class="container">  
     <h1>欢迎访问！请选择功能！</h1>  
+    <script>
+      sessionStorage.setItem('user_logged_in', 'true');
+    </script>
     <div class="buttons">  
       <button onclick="window.location.href='BMI'">测BMI</button>  
       <button onclick="window.location.href='shizhong'">数字时钟</button>  
