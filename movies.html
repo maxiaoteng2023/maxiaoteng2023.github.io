@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>选择电影</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      background-color: #f2f2f2;  
+      margin: 0;  
+      padding: 0;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      height: 100vh;  
+      background-image: url('background.jpg');  
+      background-size: cover;  
+    }  
+      
+    .container {  
+      max-width: 400px;  
+      background-color: #fff;  
+      padding: 20px;  
+      border-radius: 5px;  
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+      position: relative;  
+    }  
+      
+    h1 {  
+      text-align: center;  
+      color: #333;  
+    }  
+      
+    .movie-list {  
+      display: flex;  
+      justify-content: space-around;  
+    }  
+      
+    .movie-list li {  
+      list-style-type: none;  
+      padding: 10px;  
+      border-bottom: 1px solid #ccc;  
+    }  
+      
+    .movie-list li img {  
+      width: 50px;  
+      height: 50px;  
+      border-radius: 50%;  
+      object-fit: cover;  
+    }  
+      
+    .movie-list button {  
+      position: absolute;  
+      bottom: 10px;  
+      right: 10px;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <h1>选择电影</h1>  
+    <ul class="movie-list">  
+      <li>  
+        <button onclick="window.location.href='movies/jianrupanshi.mp4'">坚如磐石</button>  
+      </li>  
+      <!-- <li>    
+        <button onclick="window.location.href='movie2.html'">查看详情</button>  
+      </li>   -->
+    </ul>  
+  </div>  
+</body>  
+</html>
