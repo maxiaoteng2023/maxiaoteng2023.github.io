@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>线路四：直播网站学习</title>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.6.2/flv.min.js"></script>
+</head>
+<body>
+<div id="dplayer"></div>
+<script src="node_modules/dplayer/dist/DPlayer.min.js"></script>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        live: true,
+            video: {
+              type: 'flv',
+              url: 'http://127.0.0.1:7001/live/movie.flv',
+        },
+    });
+</script>
+    <h1>这里是本地测试线路；切换线路可能需刷新：</h1>
+	该线路仅供主播的主机本地测试使用，其他人无法收到推流。
+    <a href = /index.html>线路一</a>；
+    <a href = /line2.html>线路二</a>；
+    <a href = /line3.html>线路三</a>；
+    <a href = /line4.html>本地测试线路，除localhost不可用</a>
+</body>
+</html>
